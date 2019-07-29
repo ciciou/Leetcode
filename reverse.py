@@ -34,6 +34,7 @@ class Solution:
         return int(''.join(reversed(str(bin(x)[2:].zfill(32)))),2)
 
     def reverse_3(self,x:int)->int:
+        #思路：&运算（取最后一位二进制数）、>>运算（右移）、result*2+temp（最后一位二进制数）
         result=0
         for n in range(32):
             index=x&1
