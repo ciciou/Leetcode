@@ -11,6 +11,18 @@ class Solution():
             else:
                 result.pop()
         return not bool(result)
+    def isValid_1(self,s:str)->bool:
+        stack=[]
+        dict={'()', '{}', '[]'}
+        for i in s:
+            if not stack:
+                stack.append(i)
+            else:
+                if stack[-1]+i in dict:
+                    stack.pop()
+                else:
+                    stack.append(i)
+        return stack==[]
 
 if __name__=='__main__':
-    print(Solution().isValid("()"))
+    print(Solution().isValid_1("[]"))
