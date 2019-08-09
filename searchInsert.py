@@ -3,6 +3,7 @@
 from typing import List
 class Solution():
     def searchInsert(self,nums:List[int],target:int)->int:
+       #思路：enumerate函数
         for index,num in enumerate(nums):
             if target<=num:
                 return index
