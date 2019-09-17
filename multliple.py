@@ -15,7 +15,7 @@ class Solution:
                 else:
                     numlist2 = numlist1
                     numlist1 = []
-        return numlist2
+        return ''.join(numlist2)
 if __name__ == '__main__':
     str = "012k35abc12defg3546xyz12"
     print(Solution().FindMaxLenNumSeq(str=str))
